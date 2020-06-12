@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/main_fragment_vp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:background="@color/main_dividing_line"
+            android:layout_width="match_parent"
+            android:layout_height="2px" />
+
+        <RadioGroup
+            android:id="@+id/main_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@color/pure_white"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/main_tab_time"
+                android:checked="true"
+                android:gravity="center"
+                android:layout_gravity="center"
+                style="@style/Main_TabRadioButton"
+                android:textColor="@drawable/main_radiobutton_text_color"
+                android:drawableTop="@drawable/main_tab_selector_time"
+                android:text="学习"
+                android:textSize="10dp"/>
+
+            <RadioButton
+                android:id="@+id/main_tab_me"
+                android:gravity="center"
+                android:layout_gravity="center"
+                style="@style/Main_TabRadioButton"
+                android:textColor="@drawable/main_radiobutton_text_color"
+                android:drawableTop="@drawable/main_tab_selector_me"
+                android:text="我的"
+                android:textSize="10dp"/>
+        </RadioGroup>
+    </LinearLayout>
+</LinearLayout>
